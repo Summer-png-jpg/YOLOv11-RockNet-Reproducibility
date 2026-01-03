@@ -1,0 +1,15 @@
+channels:
+  - conda-forge
+  - pytorch
+dependencies:
+  - python=3.11
+  - pytorch=2.3
+  - torchvision
+  - cudatoolkit=12.1
+  - numpy
+  - pandas
+  - matplotlib
+  - opencv
+  - pip
+  - pip:
+      - ultralytics==8.3.0

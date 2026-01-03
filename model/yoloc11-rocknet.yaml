@@ -1,0 +1,24 @@
+# YOLOv11-RockNet architecture description
+# This file documents the exact network design used in the paper.
+
+nc: 1  # rock joint
+
+note: >
+  This configuration records the model architecture used in the experiments.
+  CBAM modules are integrated into the detection heads following the Ultralytics
+  custom-module mechanism. This file is provided for transparency and
+  documentation rather than for direct training reproduction.
+
+backbone:
+  - Conv
+  - C3k2
+  - SPPF
+
+neck:
+  - PAN
+
+head:
+  - CBAM (256)
+  - CBAM (512)
+  - CBAM (1024)
+  - Detect
